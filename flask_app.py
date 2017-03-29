@@ -5,8 +5,8 @@ import os.environ
 
 
 HOST = '0.0.0.0' if 'PORT' in os.environ else '127.0.0.1'
-PORT = int(os.environ.get('PORT', 5000)))
-app.run(host=HOST, port=PORT)
+PORT = int(os.environ.get('PORT', 5000))
+
 
 app = Flask(__name__)
 
@@ -27,4 +27,4 @@ def login():
             return render_template('error.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=HOST, port=PORT)
