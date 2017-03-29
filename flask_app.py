@@ -26,5 +26,7 @@ def login():
         else:
             return render_template('error.html')
 
+app.run(host=HOST, port=PORT)
+
 if __name__ == '__main__':
     app.run(host=HOST, port=PORT)
